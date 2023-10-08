@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/countries")
@@ -25,6 +26,11 @@ public class CountryController {
     @GetMapping
     public List<Country> findAll() {
         return countryRepository.findAll();
+    }
+
+    @GetMapping("/{id}")
+    public Optional<Country> findById(@PathVariable String id) {
+        return countryRepository.findById(id);
     }
 
     @DeleteMapping("/{id}")
