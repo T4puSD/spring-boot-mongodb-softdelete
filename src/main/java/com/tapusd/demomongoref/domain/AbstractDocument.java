@@ -12,7 +12,7 @@ public abstract class AbstractDocument implements Serializable {
     private String id;
     private Status status = Status.ENABLED;
     private boolean isDeleted;
-    private Instant updatedAt = Instant.now();
+    private Instant updatedAt;
     private Instant createdAt = Instant.now();
     private Instant deletedAt;
 
