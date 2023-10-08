@@ -1,4 +1,4 @@
-package com.tapusd.demomongoref.domain;
+package com.tapusd.demomongoref.domain.enums;
 
 public enum Status {
     ENABLED,

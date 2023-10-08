@@ -1,15 +1,11 @@
 package com.tapusd.demomongoref.domain;
 
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = Country.COLLECTION_NAME)
 public class Country extends AbstractDocument {
 
     public static final String COLLECTION_NAME = "country";
-
-    @Id
-    private String id;
 
     private String name;
 
@@ -18,15 +14,6 @@ public class Country extends AbstractDocument {
     private String isoCodeFull;
 
     private String dialCode;
-
-    public String getId() {
-        return id;
-    }
-
-    public Country setId(String id) {
-        this.id = id;
-        return this;
-    }
 
     public String getName() {
         return name;

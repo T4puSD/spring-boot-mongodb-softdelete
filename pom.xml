@@ -15,6 +15,7 @@
     <description>demomongoref</description>
     <properties>
         <java.version>21</java.version>
+        <mapstruct.version>1.5.5.Final</mapstruct.version>
     </properties>
     <dependencies>
         <dependency>
@@ -36,6 +37,11 @@
         <dependency>
             <groupId>io.mongock</groupId>
             <artifactId>mongodb-springdata-v4-driver</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>${mapstruct.version}</version>
         </dependency>
 
         <dependency>
@@ -69,6 +75,23 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>${maven-compiler-plugin.version}</version>
+            <configuration>
+                <source>${maven-source-plugin.version}</source> <!-- depending on your project -->
+                <target>${maven-compiler-plugin.version}</target> <!-- depending on your project -->
+                <annotationProcessorPaths>
+                    <path>
+                        <groupId>org.mapstruct</groupId>
+                        <artifactId>mapstruct-processor</artifactId>
+                        <version>${mapstruct.version}</version>
+                    </path>
+                    <!-- other annotation processors -->
+                </annotationProcessorPaths>
+            </configuration>
+        </plugin>
         </plugins>
     </build>
 

@@ -1,7 +1,7 @@
 package com.tapusd.demomongoref.db.changelog;
 
 import com.tapusd.demomongoref.domain.Country;
-import com.tapusd.demomongoref.domain.Status;
+import com.tapusd.demomongoref.domain.enums.Status;
 import io.mongock.api.annotations.BeforeExecution;
 import io.mongock.api.annotations.ChangeUnit;
 import io.mongock.api.annotations.Execution;

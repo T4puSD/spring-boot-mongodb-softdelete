@@ -1,14 +1,29 @@
 package com.tapusd.demomongoref.domain;
 
+import com.tapusd.demomongoref.domain.enums.Status;
+import org.springframework.data.annotation.Id;
+
 import java.io.Serializable;
 import java.time.Instant;
 
 public abstract class AbstractDocument implements Serializable {
-    private Status status;
+
+    @Id
+    private String id;
+    private Status status = Status.ENABLED;
     private boolean isDeleted;
-    private Instant updatedAt;
-    private Instant createdAt;
+    private Instant updatedAt = Instant.now();
+    private Instant createdAt = Instant.now();
     private Instant deletedAt;
+
+    public String getId() {
+        return id;
+    }
+
+    public AbstractDocument setId(String id) {
+        this.id = id;
+        return this;
+    }
 
     public Status getStatus() {
         return status;
