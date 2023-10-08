@@ -12,7 +12,7 @@ import java.util.Optional;
 public interface SoftDeleteRepository<T, ID> extends MongoRepository<T, ID> {
 
     @Override
-    @Query("{$and: [{isoCode: ?0}, {isDeleted: false}]}")
+    @Query("{$and: [{id: ?0}, {isDeleted: false}]}")
     Optional<T> findById(ID id);
 
     @Override
