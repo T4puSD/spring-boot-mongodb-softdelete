@@ -20,18 +20,6 @@ public class CountryLoader {
         this.mongoTemplate = mongoTemplate;
     }
 
-    @BeforeExecution
-    public void beforeChangeSet() {
-        mongoTemplate.execute(db -> {
-            db.drop();
-            return null;
-        });
-    }
-
-    @RollbackBeforeExecution
-    public void rollbackBeforeChangeSet() {
-    }
-
     @Execution
     public void changeSet() {
         mongoTemplate.save(new Country()
