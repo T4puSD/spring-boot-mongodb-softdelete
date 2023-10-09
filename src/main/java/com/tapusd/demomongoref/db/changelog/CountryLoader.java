@@ -2,10 +2,8 @@ package com.tapusd.demomongoref.db.changelog;
 
 import com.tapusd.demomongoref.domain.Country;
 import com.tapusd.demomongoref.domain.enums.Status;
-import io.mongock.api.annotations.BeforeExecution;
 import io.mongock.api.annotations.ChangeUnit;
 import io.mongock.api.annotations.Execution;
-import io.mongock.api.annotations.RollbackBeforeExecution;
 import io.mongock.api.annotations.RollbackExecution;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Query;
