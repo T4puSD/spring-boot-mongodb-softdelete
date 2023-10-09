@@ -17,7 +17,7 @@ public class Currency extends AbstractDocument {
     @Indexed(unique = true)
     private String code;
 
-    @DocumentReference
+    @DocumentReference(lazy = true)
     @Field(name = "countryIds")
     private List<Country> countries;
 
