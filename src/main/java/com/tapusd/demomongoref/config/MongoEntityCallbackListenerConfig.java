@@ -19,10 +19,9 @@ public class MongoEntityCallbackListenerConfig extends AbstractMongoEventListene
     @Override
     public void onBeforeSave(BeforeSaveEvent<Country> event) {
         Document document = event.getDocument();
-        if (Objects.nonNull(document)) {
-            if(Objects.nonNull(document.getObjectId("_id"))) {
+        if (Objects.nonNull(document) &&
+            Objects.nonNull(document.getObjectId("_id"))) {
                 document.put("updatedAt", Instant.now());
-            }
         }
         super.onBeforeSave(event);
     }
