@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 
-@ChangeUnit(id="currency-new-field-add-countryIds", order = "3", author = "tapusd")
+@ChangeUnit(id="currency-new-field-add-countryIds", order = "131023003", author = "tapusd")
 public class CurrencyCountryFieldLoad {
 
     private final MongoTemplate mongoTemplate;

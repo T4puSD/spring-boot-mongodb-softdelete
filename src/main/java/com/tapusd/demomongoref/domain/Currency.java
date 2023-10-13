@@ -1,6 +1,5 @@
 package com.tapusd.demomongoref.domain;
 
-import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.DocumentReference;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -14,7 +13,6 @@ public class Currency extends AbstractDocument {
 
     private String name;
 
-    @Indexed(unique = true)
     private String code;
 
     @DocumentReference(lazy = true)

@@ -10,7 +10,7 @@ import org.springframework.data.mongodb.core.query.Query;
 
 import java.time.Instant;
 
-@ChangeUnit(id="country-data-loader", order = "1", author = "tapusd")
+@ChangeUnit(id="country-data-loader", order = "121023000", author = "tapusd")
 public class CountryLoader {
     private final MongoTemplate mongoTemplate;
 

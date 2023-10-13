@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.query.Query;
 
 import java.util.List;
 
-@ChangeUnit(id="currency-data-loader", order = "1", author = "tapusd")
+@ChangeUnit(id="currency-data-loader", order = "121023002", author = "tapusd")
 public class CurrencyLoader {
 
     private final MongoTemplate mongoTemplate;
