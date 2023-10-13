@@ -9,7 +9,11 @@ import org.springframework.data.mongodb.core.mapping.event.BeforeSaveEvent;
 import java.time.Instant;
 import java.util.Objects;
 
-@Configuration
+/**
+ * Enabled updatedAt with @LastModifiedAt mongo auditing framework
+ * @deprecated this configuration is deprecated and NOT IN EFFECT
+ */
+//@Configuration
 public class MongoEntityCallbackListenerConfig extends AbstractMongoEventListener<Country> {
 
     /**

@@ -1,34 +1,21 @@
 package com.tapusd.demomongoref.domain;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import com.tapusd.demomongoref.domain.enums.Status;
-import org.bson.types.ObjectId;
-import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 
 import java.io.Serializable;
 import java.time.Instant;
 
 public abstract class AbstractDocument implements Serializable {
 
-    @Id
-    // serializing to String instead of object during returning response to client
-    @JsonSerialize(using = ToStringSerializer.class)
-    private ObjectId id;
     private Status status = Status.ENABLED;
     private boolean isDeleted;
+    @CreatedDate
+    private Instant createdAt;
+    @LastModifiedDate
     private Instant updatedAt;
-    private Instant createdAt = Instant.now();
     private Instant deletedAt;
-
-    public ObjectId getId() {
-        return id;
-    }
-
-    public AbstractDocument setId(ObjectId id) {
-        this.id = id;
-        return this;
-    }
 
     public Status getStatus() {
         return status;
