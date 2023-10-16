@@ -37,6 +37,18 @@ public class CountryController {
         return countryRepository.findAll();
     }
 
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public void save(@RequestBody CountryRequestDTO dto) {
+        var country = new Country()
+                .setName(dto.name())
+                .setIsoCode(dto.isoCode())
+                .setIsoCodeFull(dto.isoCodeFull())
+                .setDialCode(dto.dialCode());
+
+        countryRepository.save(country);
+    }
+
     @GetMapping("/{id}")
     public Optional<Country> findById(@PathVariable String id) {
         return countryRepository.findById(id);
