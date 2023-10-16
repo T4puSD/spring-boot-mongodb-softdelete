@@ -53,6 +53,6 @@ public class CountryLoader {
 
     @RollbackExecution
     public void rollbackChangeSet() {
-        mongoTemplate.remove(new Query(), Country.COLLECTION_NAME);
+        mongoTemplate.remove(new Query(), Country.class);
     }
 }

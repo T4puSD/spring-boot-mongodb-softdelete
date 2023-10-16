@@ -38,6 +38,6 @@ public class CurrencyLoader {
 
     @RollbackExecution
     public void rollbackChangeSet() {
-        mongoTemplate.remove(new Query(), Currency.COLLECTION_NAME);
+        mongoTemplate.remove(new Query(), Currency.class);
     }
 }
