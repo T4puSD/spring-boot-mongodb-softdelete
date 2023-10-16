@@ -14,7 +14,7 @@ public class Currency extends AbstractDocument {
 
     private String name;
 
-    @Indexed(unique = true)
+    @Indexed(unique = true, partialFilter = "{isDeleted: false}")
     private String code;
 
     @DocumentReference(lazy = true)
