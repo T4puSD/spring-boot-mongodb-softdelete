@@ -5,6 +5,7 @@ spring:
     mongodb:
       uri: mongodb://localhost:37017
       database: demomongoref
+      auto-index-creation: true
 mongock:
   migration-scan-package:
     - com.tapusd.demomongoref.db
