@@ -14,10 +14,10 @@ For that run the following command first `mvn clean install` to generate the
 ## Soft delete feature is implemented at 2 stage
 1. Defining unique partial index at document level
 https://github.com/T4puSD/spring-boot-demo-mongodb-softdelete/blob/bea63de15b825b9b65041136d315e1f3c6d5be08/src/main/java/com/tapusd/demomongoref/domain/Currency.java#L10-L18
-2. Defining Soft Delete Repository and utilizing it
+2. Defining Soft Delete Repository and utilizing it   
 **Soft Delete Repository:**
 
-https://github.com/T4puSD/spring-boot-demo-mongodb-softdelete/blob/bea63de15b825b9b65041136d315e1f3c6d5be08/src/main/java/com/tapusd/demomongoref/repository/SoftDeleteRepository.java#L11-L32
+https://github.com/T4puSD/spring-boot-demo-mongodb-softdelete/blob/bea63de15b825b9b65041136d315e1f3c6d5be08/src/main/java/com/tapusd/demomongoref/repository/SoftDeleteRepository.java#L11-L32   
 
 **Utilizing Soft Delete Repository:**   
 
